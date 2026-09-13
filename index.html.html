@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Log</title>
+<meta name="theme-color" content="#E9EBE7">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Log">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAIAAACyr5FlAAACC0lEQVR42u3bsY3CMBiAUYNuDyioUsAMbEDBmBRswAz0NLfJDXDBgJUY5/d7rWMhJZ+siNir7bBPMGbtFiAOxIE4EAfiQByIA3EgDsQB4kAciANxIA7EgTgQB+JAHCAOxIE4EAfiQByIA3EgDsQB4kAciANxIA7EgTgQB+JAHPTrxy2o73DaPRu6Xx9WDmWUjIqj3zJa60MciANxIA7EgTgQB+JAHIgDcYA4EAfiQByIA3EgDsRBWHafL2YvuJWjoTJSY3vBxdFQGfrwzoE4EAfiQByIA3EgDsRBeL6tLEnlz0BWjghlpHn+5hdHhDJm6kMciANxIA7EwVc19z/H5nh+NvR7u3hg/a4cmTJejhI5jneevT68cyAOxIE4EAfiAHEgDsSBOBAH4kAcLIxzK+XCbz2xckxfRoqytUAc05cRpg9xIA7EgTgQB+JAHIgDcSAOxAH/zPVV1mF5K8fHZSSHoXuOw2F5cSAOxAHiQByIA3EgDsSBOBAH4qBDcQ5S2yRg5fi4jOQjcM9x2CQgDsSBOBAH4kAciAPEgTgQB+JAHIgDcSAOxIE4EMe03tmwOXpN/Yn36+PlxNFr6v9i8cTmVo78vcuM1p+Yv6GZ0fq/WDyx2Go77K2feOdAHIgDcSAOxIE4EAfiQBwgDsSBOBAH4kAciANxIA7EAeJAHIgDcSAOxIE4EAeh/AFRu2tlXQsHrAAAAABJRU5ErkJggg==">
+<link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAIAAACyr5FlAAACC0lEQVR42u3bsY3CMBiAUYNuDyioUsAMbEDBmBRswAz0NLfJDXDBgJUY5/d7rWMhJZ+siNir7bBPMGbtFiAOxIE4EAfiQByIA3EgDsQB4kAciANxIA7EgTgQB+JAHCAOxIE4EAfiQByIA3EgDsQB4kAciANxIA7EgTgQB+JAHPTrxy2o73DaPRu6Xx9WDmWUjIqj3zJa60MciANxIA7EgTgQB+JAHIgDcYA4EAfiQByIA3EgDsRBWHafL2YvuJWjoTJSY3vBxdFQGfrwzoE4EAfiQByIA3EgDsRBeL6tLEnlz0BWjghlpHn+5hdHhDJm6kMciANxIA7EwVc19z/H5nh+NvR7u3hg/a4cmTJejhI5jneevT68cyAOxIE4EAfiAHEgDsSBOBAH4kAcLIxzK+XCbz2xckxfRoqytUAc05cRpg9xIA7EgTgQB+JAHIgDcSAOxAH/zPVV1mF5K8fHZSSHoXuOw2F5cSAOxAHiQByIA3EgDsSBOBAH4qBDcQ5S2yRg5fi4jOQjcM9x2CQgDsSBOBAH4kAciAPEgTgQB+JAHIgDcSAOxIE4EMe03tmwOXpN/Yn36+PlxNFr6v9i8cTmVo78vcuM1p+Yv6GZ0fq/WDyx2Go77K2feOdAHIgDcSAOxIE4EAfiQBwgDsSBOBAH4kAciANxIA7EAeJAHIgDcSAOxIE4EAeh/AFRu2tlXQsHrAAAAABJRU5ErkJggg==">
+<style>
+  html,body{margin:0;padding:0;background:#E9EBE7;-webkit-text-size-adjust:100%}
+  body{padding-bottom:env(safe-area-inset-bottom,0px)}
+</style>
+</head>
+<body>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Archivo:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --paper:#E9EBE7; --surface:#F5F6F3; --ink:#202A2E; --muted:#6B7A7E; --hair:#D2D6D0;
+    --moss:#4F7A52; --ochre:#B07D3A; --rose:#9C5F58; --sky:#3F6B82;
+    --serif:"Newsreader",Georgia,serif; --sans:"Archivo","Helvetica Neue",Arial,sans-serif;
+  }
+  *{box-sizing:border-box}
+  .lg-root{background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.5;
+    max-width:640px;margin:0 auto;padding:22px 20px 60px;-webkit-font-smoothing:antialiased}
+  .lg-root button{font-family:inherit;font-size:inherit;cursor:pointer}
+  .lg-root input{font-family:inherit;font-size:inherit}
+
+  .lg-tabs{display:flex;gap:20px;border-bottom:1px solid var(--hair);margin-bottom:22px;overflow-x:auto}
+  .lg-tab{background:none;border:none;border-bottom:2px solid transparent;padding:0 0 10px;margin-bottom:-1px;
+    color:var(--muted);font-family:var(--serif);font-size:18px;white-space:nowrap}
+  .lg-tab[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--ink)}
+  .lg-tab:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+  .lg-panel[hidden]{display:none}
+
+  .lg-date{font-family:var(--serif);font-size:27px;line-height:1.15;font-weight:400;margin:0 0 2px}
+  .lg-sub{color:var(--muted);font-size:13px;margin:0 0 20px}
+
+  .lg-hero{border-bottom:1px solid var(--hair);padding-bottom:20px;margin-bottom:26px}
+  .lg-week{display:grid;grid-template-columns:repeat(7,1fr);gap:5px;height:48px;align-items:end}
+  .lg-bar-col{height:100%;display:flex;flex-direction:column;justify-content:flex-end}
+  .lg-bar{width:100%;border-radius:2px 2px 0 0;background:var(--sky);min-height:3px}
+  .lg-bar.is-zero{background:var(--hair)}
+  .lg-bar.is-blank{background:transparent;border-top:1px dashed var(--hair)}
+  .lg-daylabels{display:grid;grid-template-columns:repeat(7,1fr);gap:5px;margin-top:6px;color:var(--muted);font-size:11px;text-align:center}
+  .lg-daylabels span.is-today{color:var(--ink);font-weight:600}
+  .lg-heroline{font-family:var(--serif);font-size:17px;margin:13px 0 0}
+  .lg-heroline b{font-weight:500}
+  .lg-heroline em{color:var(--muted);font-family:var(--sans);font-size:13px;font-style:normal}
+
+  .lg-recall{background:var(--surface);border-left:3px solid var(--sky);padding:13px 15px;margin:0 0 26px;
+    font-family:var(--serif);font-size:17px;line-height:1.4}
+  .lg-recall b{display:block;font-family:var(--sans);font-size:11.5px;font-weight:500;color:var(--muted);margin-bottom:5px}
+
+  .lg-q{margin-bottom:23px}
+  .lg-q.is-lead{background:var(--surface);border:1px solid var(--hair);border-radius:4px;padding:15px 15px 17px}
+  .lg-q-label{font-family:var(--serif);font-size:19px;line-height:1.3;margin:0 0 8px}
+  .lg-hint{color:var(--muted);font-size:12.5px;margin:0 0 9px}
+  .lg-sec{font-family:var(--serif);font-size:15px;color:var(--muted);margin:32px 0 16px;
+    padding-bottom:7px;border-bottom:1px solid var(--hair)}
+
+  .lg-text{width:100%;background:var(--surface);border:1px solid var(--hair);border-radius:3px;padding:10px 12px;color:var(--ink)}
+  .lg-q.is-lead .lg-text{background:#fff}
+  .lg-text::placeholder{color:#9AA5A8}
+  .lg-text:focus{outline:2px solid var(--ink);outline-offset:-1px;border-color:transparent}
+
+  .lg-chips{display:flex;flex-wrap:wrap;gap:6px}
+  .lg-chip{background:var(--surface);border:1px solid var(--hair);border-radius:999px;padding:7px 14px;color:var(--muted)}
+  .lg-q.is-lead .lg-chip{background:#fff}
+  .lg-chip[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:var(--surface)}
+  .lg-chip.is-floor[aria-pressed="true"]{background:var(--moss);border-color:var(--moss);color:#fff}
+  .lg-chip.is-full[aria-pressed="true"]{background:var(--moss);border-color:var(--moss);color:#fff}
+  .lg-chip.is-warn[aria-pressed="true"]{background:var(--rose);border-color:var(--rose);color:#fff}
+  .lg-chip:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+
+  .lg-scale{display:flex;gap:6px}
+  .lg-scale-btn{flex:1;background:var(--surface);border:1px solid var(--hair);border-radius:3px;padding:10px 0 8px;
+    color:var(--muted);line-height:1.2;text-align:center}
+  .lg-scale-btn small{display:block;font-size:10px;margin-top:3px}
+  .lg-scale-btn[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:var(--surface)}
+  .lg-scale-btn:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+
+  .lg-anchor{padding:14px 0;border-bottom:1px solid var(--hair)}
+  .lg-anchor:last-of-type{border-bottom:none}
+  .lg-anchor-name{font-family:var(--serif);font-size:18px;margin:0 0 3px}
+  .lg-anchor-sub{color:var(--muted);font-size:12px;margin:0 0 9px}
+  .lg-flag{border-left:3px solid var(--rose);padding-left:13px}
+
+  .lg-spark-add{display:flex;gap:7px;margin-bottom:8px}
+  .lg-spark-add .lg-text{flex:1}
+  .lg-spark-list{list-style:none;margin:20px 0 0;padding:0}
+  .lg-spark{display:flex;align-items:flex-start;gap:11px;padding:12px 0;border-bottom:1px solid var(--hair)}
+  .lg-spark-body{flex:1}
+  .lg-spark-text{font-family:var(--serif);font-size:17px;line-height:1.35}
+  .lg-spark.is-done .lg-spark-text{color:var(--muted);text-decoration:line-through}
+  .lg-spark-meta{color:var(--muted);font-size:11.5px;margin-top:3px}
+  .lg-mark{background:none;border:1px solid var(--hair);border-radius:999px;width:22px;height:22px;flex:none;
+    margin-top:3px;padding:0;color:transparent}
+  .lg-spark.is-done .lg-mark{background:var(--moss);border-color:var(--moss);color:#fff;font-size:12px}
+  .lg-del{background:none;border:none;color:var(--muted);font-size:18px;line-height:1;padding:2px 4px}
+  .lg-empty{font-family:var(--serif);font-size:16.5px;color:var(--muted);padding:24px 0;line-height:1.45}
+
+  .lg-ribbon{display:grid;grid-template-columns:repeat(30,1fr);gap:3px;height:36px;align-items:end}
+  .lg-cell{height:100%;border-radius:2px;background:transparent;border:1px solid var(--hair);padding:0}
+  .lg-cell.is-partial{background:var(--ochre);border-color:var(--ochre);opacity:.5}
+  .lg-cell.is-full{background:var(--moss);border-color:var(--moss)}
+  .lg-cell.is-today{box-shadow:0 0 0 2px var(--paper),0 0 0 3px var(--ink)}
+
+  .lg-readout{margin:0}
+  .lg-readout dt{font-family:var(--serif);font-size:17px;margin-top:19px}
+  .lg-readout dd{margin:3px 0 0;color:var(--muted);font-size:13.5px}
+  .lg-readout dd.up{color:var(--moss)}
+  .lg-readout dd.down{color:var(--rose)}
+  .lg-note-item{padding:9px 0;border-bottom:1px solid var(--hair);font-size:14px}
+  .lg-note-item b{font-weight:500;color:var(--muted);font-size:12px;display:block}
+
+  .lg-rule-item{padding:16px 0;border-bottom:1px solid var(--hair)}
+  .lg-rule-item h3{font-family:var(--serif);font-size:19px;font-weight:400;margin:0 0 5px}
+  .lg-rule-item p{margin:0;color:var(--muted);font-size:13.5px;line-height:1.55}
+  .lg-edit-row{display:flex;gap:7px;margin-top:8px;flex-wrap:wrap}
+  .lg-edit-row .lg-text{flex:1;min-width:120px}
+
+  .lg-actions{border-top:1px solid var(--hair);padding-top:20px;margin-top:28px;display:flex;flex-wrap:wrap;gap:9px;align-items:center}
+  .lg-btn{background:var(--ink);color:var(--surface);border:none;border-radius:3px;padding:11px 17px;font-weight:500}
+  .lg-btn.is-ghost{background:transparent;color:var(--muted);border:1px solid var(--hair)}
+  .lg-status{color:var(--muted);font-size:12.5px;margin-left:auto}
+  .lg-out{width:100%;margin-top:13px;background:var(--surface);border:1px solid var(--hair);border-radius:3px;
+    padding:13px;font-size:12.5px;line-height:1.6;white-space:pre-wrap;display:none}
+  .lg-out.is-open{display:block}
+  .lg-skeleton{color:var(--muted);font-family:var(--serif);font-size:18px;padding:40px 0}
+  .lg-error{color:var(--rose);font-size:13px;margin-top:10px}
+
+  .lg-daypick{display:flex;gap:5px;margin-bottom:16px;overflow-x:auto;padding-bottom:2px}
+  .lg-daybtn{flex:1;min-width:44px;background:var(--surface);border:1px solid var(--hair);border-radius:3px;
+    padding:8px 0 6px;color:var(--muted);text-align:center;line-height:1.15}
+  .lg-daybtn small{display:block;font-size:10px;margin-top:2px}
+  .lg-daybtn[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:var(--surface)}
+  .lg-dot{display:block;height:4px;width:4px;border-radius:50%;background:var(--sky);margin:4px auto 0}
+  .lg-daybtn[aria-pressed="true"] .lg-dot{background:var(--surface)}
+  .lg-planadd{display:flex;gap:6px;flex-wrap:wrap}
+  .lg-planadd .lg-text{flex:1;min-width:150px}
+  .lg-planadd input[type=time]{width:110px;background:var(--surface);border:1px solid var(--hair);
+    border-radius:3px;padding:10px;color:var(--ink)}
+  .lg-plangroup{margin-top:24px}
+  .lg-plangroup h3{font-family:var(--serif);font-size:15px;color:var(--muted);font-weight:400;margin:0 0 2px;
+    padding-bottom:7px;border-bottom:1px solid var(--hair)}
+  .lg-item{display:flex;align-items:flex-start;gap:10px;padding:11px 0;border-bottom:1px solid var(--hair)}
+  .lg-item-body{flex:1}
+  .lg-item-text{font-family:var(--serif);font-size:17px;line-height:1.35}
+  .lg-item.is-done .lg-item-text{color:var(--muted);text-decoration:line-through}
+  .lg-item-from{color:var(--muted);font-size:11.5px;margin-top:2px}
+  .lg-time{color:var(--sky);font-size:12.5px;font-weight:600;min-width:54px;padding-top:5px}
+  .lg-item.is-done .lg-time{color:var(--muted)}
+  .lg-pull{background:none;border:1px solid var(--hair);border-radius:999px;padding:4px 11px;
+    font-size:11.5px;color:var(--muted);white-space:nowrap;margin-top:3px}
+  .lg-planline{font-size:13px;color:var(--muted);margin:-12px 0 24px}
+
+  .lg-gap{font-family:var(--serif);font-size:17px;line-height:1.45;margin:18px 0 0;padding:14px 16px;
+    background:var(--surface);border-left:3px solid var(--moss)}
+  .lg-gap b{font-weight:500}
+  .lg-gap em{display:block;font-family:var(--sans);font-size:12.5px;color:var(--muted);font-style:normal;margin-top:5px}
+  .lg-ta{width:100%;background:var(--surface);border:1px solid var(--hair);border-radius:3px;padding:11px 12px;
+    color:var(--ink);font-family:var(--serif);font-size:16px;line-height:1.45;min-height:80px;resize:vertical}
+  .lg-ta:focus{outline:2px solid var(--ink);outline-offset:-1px;border-color:transparent}
+  .lg-mini{display:flex;gap:4px;margin-top:8px;flex-wrap:wrap}
+  .lg-mini button{background:var(--surface);border:1px solid var(--hair);border-radius:3px;padding:5px 11px;
+    font-size:12.5px;color:var(--muted)}
+  .lg-mini button[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:var(--surface)}
+  .lg-mini span{font-size:12px;color:var(--muted);padding:6px 4px 0 0}
+  .lg-future{margin-bottom:22px}
+  .lg-future h4{font-family:var(--serif);font-size:18px;font-weight:400;margin:0 0 3px}
+  .lg-future p{margin:0 0 8px;color:var(--muted);font-size:12.5px;line-height:1.45}
+  .lg-pred-pre{color:var(--muted);font-size:12px;margin-top:3px}
+
+  @media (max-width:430px){
+    .lg-date{font-size:23px}.lg-q-label{font-size:17.5px}.lg-scale-btn small{display:none}
+    .lg-tabs{gap:15px}.lg-tab{font-size:16px}
+  }
+</style>
+
+<div class="lg-root" id="root">
+  <div class="lg-skeleton" id="skeleton">Opening your log…</div>
+  <div id="app" hidden>
+    <div class="lg-tabs" role="tablist">
+      <button class="lg-tab" id="tabToday" role="tab" aria-selected="true" aria-controls="panelToday">Today</button>
+      <button class="lg-tab" id="tabPlan" role="tab" aria-selected="false" aria-controls="panelPlan">Plan</button>
+      <button class="lg-tab" id="tabSparks" role="tab" aria-selected="false" aria-controls="panelSparks">Sparks</button>
+      <button class="lg-tab" id="tabProof" role="tab" aria-selected="false" aria-controls="panelProof">Proof</button>
+      <button class="lg-tab" id="tabPattern" role="tab" aria-selected="false" aria-controls="panelPattern">Pattern</button>
+      <button class="lg-tab" id="tabRules" role="tab" aria-selected="false" aria-controls="panelRules">Rules</button>
+    </div>
+
+    <!-- ===== TODAY ===== -->
+    <section class="lg-panel" id="panelToday" role="tabpanel" aria-labelledby="tabToday">
+      <h1 class="lg-date" id="dateLine"></h1>
+      <p class="lg-sub" id="subLine"></p>
+
+      <div class="lg-hero">
+        <div class="lg-week" id="weekBars" role="img" aria-label="Time that was yours, last 7 days"></div>
+        <div class="lg-daylabels" id="weekLabels"></div>
+        <p class="lg-heroline" id="heroLine"></p>
+      </div>
+
+      <p class="lg-planline" id="planLine"></p>
+
+      <div class="lg-recall" id="recall" hidden><b>You told yourself yesterday</b><span id="recallText"></span></div>
+
+      <div class="lg-q is-lead">
+        <p class="lg-q-label">How much of today was yours?</p>
+        <p class="lg-hint">Time you chose. Not recovery, not scrolling because you were too flat to move.</p>
+        <div class="lg-chips" id="own"></div>
+        <input class="lg-text" id="ownWhat" style="margin-top:10px" placeholder="What did you do with it?">
+      </div>
+
+      <p class="lg-sec">Anchors — did it happen, not whether you felt like it</p>
+      <div id="anchors"></div>
+
+      <p class="lg-sec">People expecting things</p>
+
+      <div class="lg-q">
+        <p class="lg-q-label">Follow-ups sent</p>
+        <p class="lg-hint">Job, NewCircle, anyone waiting on a reply from you.</p>
+        <div class="lg-chips" id="follow"></div>
+      </div>
+
+      <div class="lg-q">
+        <p class="lg-q-label" id="personLabel">Contact with your person</p>
+        <p class="lg-hint">Not small talk. Did they get an honest answer about how you actually are?</p>
+        <div class="lg-chips" id="person"></div>
+      </div>
+
+      <p class="lg-sec">State — logged so we can read the trend, not to judge the day</p>
+
+      <div class="lg-q"><p class="lg-q-label">Mood</p><div class="lg-scale" id="mood"></div></div>
+      <div class="lg-q"><p class="lg-q-label">Left in the tank</p><div class="lg-scale" id="tank"></div></div>
+
+      <div class="lg-q">
+        <p class="lg-q-label">Diabetes headspace</p>
+        <p class="lg-hint">Not the numbers — how much room it took up in your head.</p>
+        <div class="lg-chips" id="dia"></div>
+      </div>
+
+      <div class="lg-q">
+        <p class="lg-q-label">Money</p>
+        <p class="lg-hint">Same question. Avoidance is the signal, not the balance.</p>
+        <div class="lg-chips" id="money"></div>
+      </div>
+
+      <div class="lg-q"><p class="lg-q-label">Slept</p><div class="lg-chips" id="sleep"></div></div>
+
+      <p class="lg-sec">Notes</p>
+
+      <div class="lg-q">
+        <p class="lg-q-label">Where you faded out</p>
+        <p class="lg-hint">What you were doing the moment you checked out. The hour matters.</p>
+        <input class="lg-text" id="fade" placeholder="e.g. ~3pm, opened the bank tab, closed it, scrolled">
+      </div>
+
+      <div class="lg-q is-lead">
+        <p class="lg-q-label">What do you need to tell yourself again tomorrow?</p>
+        <p class="lg-hint">It will show up at the top of tomorrow's screen. Repeating yourself is the format, not a failure.</p>
+        <input class="lg-text" id="note" placeholder="Write it plainly, to yourself">
+      </div>
+
+      <div class="lg-q lg-flag">
+        <p class="lg-q-label">Tell the therapist</p>
+        <input class="lg-text" id="therapist" placeholder="Optional — anything you'd forget by the session">
+      </div>
+
+      <div class="lg-q">
+        <p class="lg-q-label">Tomorrow's one thing</p>
+        <input class="lg-text" id="tomorrow" placeholder="Decide it now, while you still care. You won't tomorrow.">
+      </div>
+
+      <div class="lg-actions"><span class="lg-status" id="status"></span></div>
+      <p class="lg-error" id="err"></p>
+    </section>
+
+    <!-- ===== PLAN ===== -->
+    <section class="lg-panel" id="panelPlan" role="tabpanel" aria-labelledby="tabPlan" hidden>
+      <h1 class="lg-date">Plan</h1>
+      <p class="lg-sub">Decide now, do it later. Give it an hour only if the hour helps — otherwise leave it floating and just get it done.</p>
+      <div class="lg-daypick" id="dayPick"></div>
+      <div class="lg-planadd">
+        <input class="lg-text" id="planText" placeholder="What needs doing">
+        <input type="time" id="planTime" aria-label="Fixed hour, optional">
+        <button class="lg-btn" id="planAdd">Add</button>
+      </div>
+      <p class="lg-hint" style="margin-top:8px">Leave the time blank for anytime. Clear it later if the hour stops helping.</p>
+      <div id="planBody"></div>
+    </section>
+
+    <!-- ===== SPARKS ===== -->
+    <section class="lg-panel" id="panelSparks" role="tabpanel" aria-labelledby="tabSparks" hidden>
+      <h1 class="lg-date">Sparks</h1>
+      <p class="lg-sub">Curiosity outlasts wanting. You may not want anything — but something still catches your eye. That flicker goes here.</p>
+      <div class="lg-spark-add">
+        <input class="lg-text" id="sparkInput" placeholder="Something that caught your attention">
+        <button class="lg-btn" id="sparkAdd">Add</button>
+      </div>
+      <div class="lg-chips" id="sparkKind"></div>
+      <ul class="lg-spark-list" id="sparkList"></ul>
+      <p class="lg-empty" id="sparkEmpty">Nothing yet. Next time something flickers — an idea, a place, something you liked at twelve before it had to be useful — put it here before it goes.</p>
+    </section>
+
+    <!-- ===== PROOF ===== -->
+    <section class="lg-panel" id="panelProof" role="tabpanel" aria-labelledby="tabProof" hidden>
+      <h1 class="lg-date">Proof</h1>
+      <p class="lg-sub">Depression makes confident forecasts that feel like facts. This is where you collect the receipts.</p>
+
+      <p class="lg-sec" style="margin-top:26px">Predictions</p>
+      <p class="lg-hint">Before the thing you're dreading, say how bad you expect it to be. Afterwards, say what it actually was. Nothing else.</p>
+      <input class="lg-text" id="predText" placeholder="What are you dreading?">
+      <div class="lg-mini" id="predPre"><span>How bad will it be?</span></div>
+      <button class="lg-btn" id="predAdd" style="margin-top:10px">Add prediction</button>
+      <div id="predBody"></div>
+      <div class="lg-gap" id="predGap" hidden></div>
+
+      <p class="lg-sec">What registered</p>
+      <p class="lg-hint">Anything that got through the flatness, however small. Absorption survives when enjoyment doesn't — that's why this asks about absorption, not enjoyment.</p>
+      <input class="lg-text" id="regText" placeholder="What were you doing?">
+      <div class="lg-mini" id="regAbsorb"><span>How absorbed?</span></div>
+      <div class="lg-mini" id="regAfter"><span>Afterwards?</span></div>
+      <button class="lg-btn" id="regAdd" style="margin-top:10px">Add</button>
+      <div id="regBody"></div>
+
+      <p class="lg-sec">Three futures</p>
+      <p class="lg-hint">Rough is fine. These are things to test, not to choose between. Come back monthly and change them freely.</p>
+      <div id="futures"></div>
+    </section>
+
+    <!-- ===== PATTERN ===== -->
+    <section class="lg-panel" id="panelPattern" role="tabpanel" aria-labelledby="tabPattern" hidden>
+      <h1 class="lg-date">Pattern</h1>
+      <p class="lg-sub">This week against last week. Direction is the information, not the number.</p>
+      <div class="lg-ribbon" id="ribbon" role="img" aria-label="Last 30 days logged"></div>
+      <dl class="lg-readout" id="readout"></dl>
+      <h2 class="lg-q-label" style="margin-top:32px">For the therapist</h2>
+      <div id="therapistNotes"></div>
+      <div class="lg-actions">
+        <button class="lg-btn" id="copyWeek">Copy this week for review</button>
+        <button class="lg-btn is-ghost" id="backup">Save a backup file</button>
+        <button class="lg-btn is-ghost" id="restoreBtn">Restore from backup</button>
+        <input type="file" id="restoreFile" accept="application/json" hidden>
+        <button class="lg-btn is-ghost" id="clearAll">Erase everything</button>
+      </div>
+      <div class="lg-out" id="out"></div>
+    </section>
+
+    <!-- ===== RULES ===== -->
+    <section class="lg-panel" id="panelRules" role="tabpanel" aria-labelledby="tabRules" hidden>
+      <h1 class="lg-date">Rules</h1>
+      <p class="lg-sub">Seven of these. Read them when you're about to decide you've failed.</p>
+      <div id="rules"></div>
+      <h2 class="lg-q-label" style="margin-top:30px">Your three anchors</h2>
+      <p class="lg-hint">Name them, and set a floor small enough to be slightly embarrassing. The floor is what makes bad days survivable.</p>
+      <div id="anchorEdit"></div>
+      <h2 class="lg-q-label" style="margin-top:26px">Your person</h2>
+      <p class="lg-hint">One name. Not a network — the research is consistent that one is what matters.</p>
+      <input class="lg-text" id="personName" placeholder="Who knows your real state?">
+    </section>
+  </div>
+</div>
+
+<script>
+(function(){
+  var KEY='lifelog:v3', booted=false, saveTimer=null, sparkKind='idea';
+  var state={entries:{},sparks:[],plan:{},proof:{preds:[],reg:[],futures:['','','']},settings:{anchors:[
+    {name:'Move',floor:'10 minute walk',full:'Gym or pool'},
+    {name:'NewCircle',floor:'15 minutes, anything',full:'45 minutes of real work'},
+    {name:'Sit still',floor:'2 minutes breathing',full:'15 minutes'}
+  ],person:''}};
+
+  var hasLocal=(function(){ try{ var t='__t'; window.localStorage.setItem(t,'1'); window.localStorage.removeItem(t); return true; }catch(x){ return false; } })();
+  var hasStore=(function(){try{return !!(window.storage&&typeof window.storage.get==='function');}catch(x){return false;}})();
+  var mem=null;
+  var store={
+    get:function(k){
+      if(hasLocal){ try{ var v=window.localStorage.getItem(k); return Promise.resolve(v?{value:v}:null); }catch(x){} }
+      if(!hasStore) return Promise.resolve(mem?{value:mem}:null);
+      try{return Promise.resolve(window.storage.get(k));}catch(x){return Promise.reject(x);} },
+    set:function(k,v){ mem=v;
+      if(hasLocal){ try{ window.localStorage.setItem(k,v); return Promise.resolve({value:v}); }catch(x){} }
+      if(!hasStore) return Promise.resolve({value:v});
+      try{return Promise.resolve(window.storage.set(k,v));}catch(x){return Promise.reject(x);} },
+    del:function(k){ mem=null;
+      if(hasLocal){ try{ window.localStorage.removeItem(k); }catch(x){} }
+      if(!hasStore) return Promise.resolve(true);
+      try{return Promise.resolve(window.storage.delete(k));}catch(x){return Promise.reject(x);} }
+  };
+  var canSave=hasLocal||hasStore;
+
+  var OWN=[['0','None'],['1','Under 30 min'],['2','About an hour'],['3','Two hours or more']];
+  var DOSE=[['skip','Skipped'],['floor','Floor'],['full','Full']];
+  var FOLLOW=[['0','None'],['1','One or two'],['3','Three or more'],['none','Nothing owed']];
+  var PERSON=[['no','No contact'],['light','Talked, kept it light'],['real','They got the real answer']];
+  var MOOD=[['1','1','sunk'],['2','2','low'],['3','3','flat'],['4','4','ok'],['5','5','good']];
+  var TANK=[['1','1','empty'],['2','2','fumes'],['3','3','some'],['4','4','fine'],['5','5','full']];
+  var DIA=[['quiet','Barely there'],['hum','Background hum'],['heavy','Ran the day'],['avoid','I avoided it']];
+  var MONEY=[['na','Nothing needed'],['done','Handled something'],['avoid','I avoided it']];
+  var SLEEP=[['lt5','Under 5'],['5to6','5–6'],['7to8','7–8'],['gt8','Over 8']];
+  var KINDS=[['idea','Idea'],['try','Want to try'],['someday','Someday'],['make','Something to make']];
+
+  var RULES=[
+    ['Do it on the schedule, not on the feeling.','Motivation arrives after movement, not before it. Waiting to want to is the trap. This is why nothing on the Today screen asks how you felt about doing it.'],
+    ['The floor counts as a green day.','Darwin wrote the most consequential book of his century in short daily bouts around chronic illness. A floor day is not a lesser day. All-or-nothing is what has been costing you weeks at a time.'],
+    ['Aim at something outside yourself.','Mill\u2019s conclusion after his collapse: ask directly whether you are happy and it evaporates. Aim at work, at a person, at a thing being built, and it turns up sideways while you are busy.'],
+    ['Let one person know the real state.','Not a network. Lincoln had friends who sat with him through the worst of it. The follow-up field and the contact field exist because people expecting you is more reliable than wanting to.'],
+    ['Follow curiosity, not desire.','When wanting goes flat, curiosity survives longer. You will not know what you want. You might still find something mildly interesting. That is the signal worth chasing.'],
+    ['Measure the direction, not the number.','Nothing will feel good for a while. Some things will feel slightly less grey. A month of 2s becoming a month of 3s is the whole story, and you can only see it if you logged the 2s.'],
+    ['Write it to yourself again tomorrow.','Meditations was a man repeating the same handful of instructions to himself for years because he kept forgetting them. You will forget too. That is expected, not a character flaw.']
+  ];
+
+  function el(id){return document.getElementById(id);}
+  function dayKey(d){return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');}
+  function shift(d,n){var x=new Date(d);x.setDate(x.getDate()+n);return x;}
+  var today=new Date(), TODAY=dayKey(today);
+  function entry(k){if(!state.entries[k])state.entries[k]={};return state.entries[k];}
+  function e(){return entry(TODAY);}
+  function setStatus(m){el('status').textContent=m;
+    if(m==='Saved')setTimeout(function(){if(el('status').textContent==='Saved')el('status').textContent='';},1500);}
+  function save(){
+    clearTimeout(saveTimer);
+    saveTimer=setTimeout(function(){
+      store.set(KEY,JSON.stringify(state))
+        .then(function(r){ if(r){setStatus('Saved');} })
+        .catch(function(){ el('err').textContent='Could not save your last few answers.'; });
+    },400);
+  }
+  function touched(d){ if(!d)return false;
+    for(var k in d){ var v=d[k]; if(v!==undefined&&v!==''&&v!==null) return true; } return false; }
+  function score(d){ if(!d)return 0; var n=0;
+    if(d.own!==undefined)n+=2;
+    ['a0','a1','a2'].forEach(function(a){ if(d[a]==='full')n+=1; else if(d[a]==='floor')n+=1; });
+    if(d.mood)n+=1; if(d.tank)n+=1; return n; }
+
+  function single(host,items,field,cls,after,extra){
+    host.innerHTML='';
+    items.forEach(function(it){
+      var b=document.createElement('button'); b.type='button';
+      b.className=cls+(extra&&extra[it[0]]?' '+extra[it[0]]:''); b.dataset.val=it[0];
+      b.innerHTML=cls==='lg-scale-btn'?it[1]+'<small>'+it[2]+'</small>':it[1];
+      b.setAttribute('aria-pressed','false');
+      b.addEventListener('click',function(){
+        e()[field]=e()[field]===it[0]?undefined:it[0];
+        paintSingle(host,field); if(after)after(); save();
+      });
+      host.appendChild(b);
+    });
+  }
+  function paintSingle(host,field){
+    Array.prototype.forEach.call(host.children,function(b){
+      b.setAttribute('aria-pressed',e()[field]===b.dataset.val?'true':'false');});
+  }
+  function wireText(id,field){ el(id).addEventListener('input',function(){e()[field]=el(id).value;save();}); }
+
+  /* ---- anchors ---- */
+  function renderAnchors(){
+    var host=el('anchors'); host.innerHTML='';
+    state.settings.anchors.forEach(function(a,i){
+      var wrap=document.createElement('div'); wrap.className='lg-anchor';
+      var h=document.createElement('p'); h.className='lg-anchor-name'; h.textContent=a.name||('Anchor '+(i+1));
+      var s=document.createElement('p'); s.className='lg-anchor-sub';
+      s.textContent='floor: '+(a.floor||'—')+'   ·   full: '+(a.full||'—');
+      var chips=document.createElement('div'); chips.className='lg-chips';
+      wrap.appendChild(h); wrap.appendChild(s); wrap.appendChild(chips);
+      host.appendChild(wrap);
+      single(chips,DOSE,'a'+i,'lg-chip',renderHero,{floor:'is-floor',full:'is-full'});
+      paintSingle(chips,'a'+i);
+    });
+  }
+  function renderAnchorEdit(){
+    var host=el('anchorEdit'); host.innerHTML='';
+    state.settings.anchors.forEach(function(a,i){
+      var row=document.createElement('div'); row.className='lg-edit-row';
+      [['name','Name'],['floor','Floor'],['full','Full']].forEach(function(f){
+        var inp=document.createElement('input'); inp.className='lg-text';
+        inp.placeholder=f[1]; inp.value=a[f[0]]||'';
+        inp.addEventListener('input',function(){ a[f[0]]=inp.value; renderAnchors(); save(); });
+        row.appendChild(inp);
+      });
+      host.appendChild(row);
+    });
+  }
+
+  /* ---- hero ---- */
+  function renderHero(){
+    var bars=el('weekBars'), labs=el('weekLabels'); bars.innerHTML=''; labs.innerHTML='';
+    var withTime=0, any=0;
+    for(var i=6;i>=0;i--){
+      var d=shift(today,-i), k=dayKey(d), r=state.entries[k];
+      var col=document.createElement('div'); col.className='lg-bar-col';
+      var bar=document.createElement('div'); bar.className='lg-bar';
+      if(!r||r.own===undefined){ bar.className+=' is-blank'; bar.style.height='0'; }
+      else { any++; var v=Number(r.own);
+        if(v===0){ bar.className+=' is-zero'; bar.style.height='5px'; }
+        else { withTime++; bar.style.height=Math.round((v/3)*100)+'%'; } }
+      col.appendChild(bar); bars.appendChild(col);
+      var s=document.createElement('span'); s.textContent=d.toLocaleDateString(undefined,{weekday:'narrow'});
+      if(k===TODAY)s.className='is-today'; labs.appendChild(s);
+    }
+    var h=el('heroLine');
+    if(any===0) h.innerHTML='<b>No days logged yet.</b> <em>This bar is the one that matters. Flat means the week belonged to everyone else.</em>';
+    else if(withTime===0) h.innerHTML='<b>No time for yourself in '+any+(any===1?' logged day':' logged days')+'.</b> <em>Worth naming rather than letting it slide past.</em>';
+    else h.innerHTML='<b>'+withTime+' of '+any+' logged '+(any===1?'day':'days')+' had time that was yours.</b> <em>'+
+      (withTime>=5?'That is what holds the rest up.':'Move this one before anything else.')+'</em>';
+  }
+
+  /* ---- sparks ---- */
+  function renderSparks(){
+    var list=el('sparkList'); list.innerHTML='';
+    el('sparkEmpty').style.display=state.sparks.length?'none':'block';
+    state.sparks.slice().reverse().forEach(function(s){
+      var li=document.createElement('li'); li.className='lg-spark'+(s.done?' is-done':'');
+      var mark=document.createElement('button'); mark.className='lg-mark'; mark.type='button'; mark.textContent='\u2713';
+      mark.setAttribute('aria-label',s.done?'Mark as not done':'Mark as done');
+      mark.addEventListener('click',function(){s.done=!s.done;renderSparks();save();});
+      var body=document.createElement('div'); body.className='lg-spark-body';
+      var txt=document.createElement('div'); txt.className='lg-spark-text'; txt.textContent=s.text;
+      var meta=document.createElement('div'); meta.className='lg-spark-meta';
+      meta.textContent=((KINDS.filter(function(k){return k[0]===s.kind;})[0]||['','Idea'])[1])+' \u00b7 '+
+        new Date(s.at).toLocaleDateString(undefined,{month:'short',day:'numeric'});
+      body.appendChild(txt); body.appendChild(meta);
+      var del=document.createElement('button'); del.className='lg-del'; del.type='button'; del.textContent='\u00d7';
+      del.setAttribute('aria-label','Remove');
+      del.addEventListener('click',function(){ state.sparks=state.sparks.filter(function(x){return x.id!==s.id;}); renderSparks(); save(); });
+      li.appendChild(mark); li.appendChild(body); li.appendChild(del); list.appendChild(li);
+    });
+  }
+  function addSpark(){
+    var v=el('sparkInput').value.trim(); if(!v)return;
+    state.sparks.push({id:Date.now()+'',text:v,kind:sparkKind,at:Date.now(),done:false});
+    el('sparkInput').value=''; renderSparks(); save();
+  }
+
+  /* ---- plan ---- */
+  var planDay=TODAY;
+  function planFor(k){ if(!state.plan[k])state.plan[k]=[]; return state.plan[k]; }
+  function fmtTime(t){
+    if(!t)return '';
+    var p=t.split(':'), h=Number(p[0]), m=p[1];
+    var ap=h<12?'am':'pm', hh=h%12; if(hh===0)hh=12;
+    return hh+':'+m+' '+ap;
+  }
+  function renderDayPick(){
+    var host=el('dayPick'); host.innerHTML='';
+    for(var i=0;i<7;i++){
+      var d=shift(today,i), k=dayKey(d);
+      var b=document.createElement('button'); b.type='button'; b.className='lg-daybtn'; b.dataset.k=k;
+      b.innerHTML=(i===0?'Today':d.toLocaleDateString(undefined,{weekday:'short'}))+
+        '<small>'+d.getDate()+'</small>';
+      if((state.plan[k]||[]).some(function(x){return !x.done;})){
+        var dot=document.createElement('span'); dot.className='lg-dot'; b.appendChild(dot);
+      }
+      b.setAttribute('aria-pressed',k===planDay?'true':'false');
+      (function(kk){ b.addEventListener('click',function(){ planDay=kk; renderPlan(); }); })(k);
+      host.appendChild(b);
+    }
+  }
+  function itemRow(it,dayK,fromLabel){
+    var li=document.createElement('div'); li.className='lg-item'+(it.done?' is-done':'');
+    var mark=document.createElement('button'); mark.className='lg-mark'; mark.type='button'; mark.textContent='\u2713';
+    mark.setAttribute('aria-label',it.done?'Mark as not done':'Mark as done');
+    mark.addEventListener('click',function(){ it.done=!it.done; renderPlan(); renderPlanLine(); save(); });
+    if(it.at){ var t=document.createElement('div'); t.className='lg-time'; t.textContent=fmtTime(it.at); li.appendChild(mark); li.appendChild(t); }
+    else li.appendChild(mark);
+    var body=document.createElement('div'); body.className='lg-item-body';
+    var tx=document.createElement('div'); tx.className='lg-item-text'; tx.textContent=it.text; body.appendChild(tx);
+    if(fromLabel){ var f=document.createElement('div'); f.className='lg-item-from'; f.textContent=fromLabel; body.appendChild(f); }
+    li.appendChild(body);
+    if(fromLabel){
+      var pull=document.createElement('button'); pull.className='lg-pull'; pull.type='button'; pull.textContent='Move to today';
+      pull.addEventListener('click',function(){
+        state.plan[dayK]=(state.plan[dayK]||[]).filter(function(x){return x.id!==it.id;});
+        planFor(TODAY).push(it); planDay=TODAY; renderPlan(); renderPlanLine(); save();
+      });
+      li.appendChild(pull);
+    }
+    var del=document.createElement('button'); del.className='lg-del'; del.type='button'; del.textContent='\u00d7';
+    del.setAttribute('aria-label','Remove');
+    del.addEventListener('click',function(){
+      state.plan[dayK]=(state.plan[dayK]||[]).filter(function(x){return x.id!==it.id;});
+      renderPlan(); renderPlanLine(); save();
+    });
+    li.appendChild(del);
+    return li;
+  }
+  function group(title,items,dayK,fromLabel){
+    var g=document.createElement('div'); g.className='lg-plangroup';
+    var h=document.createElement('h3'); h.textContent=title; g.appendChild(h);
+    items.forEach(function(it){ g.appendChild(itemRow(it,dayK,fromLabel)); });
+    return g;
+  }
+  function renderPlan(){
+    renderDayPick();
+    var host=el('planBody'); host.innerHTML='';
+    var items=planFor(planDay);
+    var timed=items.filter(function(x){return x.at;}).sort(function(a,b){return a.at<b.at?-1:1;});
+    var any=items.filter(function(x){return !x.at;});
+
+    if(timed.length)host.appendChild(group('At a set hour',timed,planDay));
+    if(any.length)host.appendChild(group('Anytime',any,planDay));
+    if(!items.length){
+      var p=document.createElement('p'); p.className='lg-empty';
+      p.textContent='Nothing planned. Adding one thing is enough — an empty day you chose beats a full one you didn\u2019t.';
+      host.appendChild(p);
+    }
+    if(planDay===TODAY){
+      var over=[];
+      for(var i=1;i<=7;i++){
+        var k=dayKey(shift(today,-i));
+        (state.plan[k]||[]).forEach(function(x){ if(!x.done)over.push({it:x,k:k,i:i}); });
+      }
+      if(over.length){
+        var g=document.createElement('div'); g.className='lg-plangroup';
+        var h=document.createElement('h3'); h.textContent='Unfinished from earlier'; g.appendChild(h);
+        over.slice(0,10).forEach(function(o){
+          g.appendChild(itemRow(o.it,o.k,o.i===1?'Yesterday':o.i+' days ago'));
+        });
+        host.appendChild(g);
+      }
+    }
+  }
+  function addPlanItem(){
+    var v=el('planText').value.trim(); if(!v)return;
+    planFor(planDay).push({id:Date.now()+'',text:v,at:el('planTime').value||null,done:false});
+    el('planText').value=''; el('planTime').value='';
+    renderPlan(); renderPlanLine(); save();
+  }
+  function renderPlanLine(){
+    var items=state.plan[TODAY]||[];
+    var done=items.filter(function(x){return x.done;}).length;
+    var next=items.filter(function(x){return !x.done&&x.at;}).sort(function(a,b){return a.at<b.at?-1:1;})[0];
+    el('planLine').textContent=!items.length?'Nothing planned today.':
+      done+' of '+items.length+' planned things done'+(next?'. Next at '+fmtTime(next.at)+': '+next.text:'.');
+  }
+
+  /* ---- proof ---- */
+  var predPre=null, regAbsorb=null, regAfter=null;
+  var SEV=[0,2,4,6,8,10];
+  var ABSORB=[['0','Not at all'],['1','A little'],['2','Properly'],['3','Lost track of time']];
+  var AFTER=[['drain','Worse after'],['same','No different'],['better','Better after']];
+  var FUTURES=[
+    ['If nothing changes','Your current path, continued honestly. The job, NewCircle, five years on. Not the version you\u2019d pitch \u2014 the likely one.'],
+    ['If that path vanished tomorrow','The company folds, the field closes. What would you build instead? This one usually holds the thing you actually want.'],
+    ['If money and other people\u2019s opinions didn\u2019t count','Not a fantasy \u2014 a real week. What would you be doing on a Tuesday?']
+  ];
+
+  function miniGroup(host,items,getVal,setVal){
+    Array.prototype.slice.call(host.querySelectorAll('button')).forEach(function(b){b.remove();});
+    items.forEach(function(it){
+      var v=Array.isArray(it)?it[0]:String(it), t=Array.isArray(it)?it[1]:String(it);
+      var b=document.createElement('button'); b.type='button'; b.textContent=t; b.dataset.val=v;
+      b.setAttribute('aria-pressed',getVal()===v?'true':'false');
+      b.addEventListener('click',function(){
+        setVal(getVal()===v?null:v);
+        Array.prototype.forEach.call(host.querySelectorAll('button'),function(x){
+          x.setAttribute('aria-pressed',getVal()===x.dataset.val?'true':'false');});
+      });
+      host.appendChild(b);
+    });
+  }
+
+  function renderPreds(){
+    var host=el('predBody'); host.innerHTML='';
+    var open=state.proof.preds.filter(function(p){return p.post===null||p.post===undefined;});
+    var done=state.proof.preds.filter(function(p){return p.post!==null&&p.post!==undefined;});
+
+    if(open.length){
+      var g=document.createElement('div'); g.className='lg-plangroup';
+      var h=document.createElement('h3'); h.textContent='Waiting on the result'; g.appendChild(h);
+      open.slice().reverse().forEach(function(p){
+        var row=document.createElement('div'); row.className='lg-item';
+        var body=document.createElement('div'); body.className='lg-item-body';
+        var t=document.createElement('div'); t.className='lg-item-text'; t.textContent=p.text;
+        var s=document.createElement('div'); s.className='lg-pred-pre'; s.textContent='You predicted '+p.pre+' out of 10';
+        var mini=document.createElement('div'); mini.className='lg-mini';
+        var lab=document.createElement('span'); lab.textContent='How was it really?'; mini.appendChild(lab);
+        SEV.forEach(function(v){
+          var b=document.createElement('button'); b.type='button'; b.textContent=v; b.dataset.val=String(v);
+          b.setAttribute('aria-pressed','false');
+          b.addEventListener('click',function(){ p.post=v; renderPreds(); save(); });
+          mini.appendChild(b);
+        });
+        body.appendChild(t); body.appendChild(s); body.appendChild(mini); row.appendChild(body);
+        var del=document.createElement('button'); del.className='lg-del'; del.type='button'; del.textContent='\u00d7';
+        del.setAttribute('aria-label','Remove');
+        del.addEventListener('click',function(){ state.proof.preds=state.proof.preds.filter(function(x){return x.id!==p.id;}); renderPreds(); save(); });
+        row.appendChild(del);
+        g.appendChild(row);
+      });
+      host.appendChild(g);
+    }
+
+    if(done.length){
+      var g2=document.createElement('div'); g2.className='lg-plangroup';
+      var h2=document.createElement('h3'); h2.textContent='Settled'; g2.appendChild(h2);
+      done.slice().reverse().slice(0,12).forEach(function(p){
+        var row=document.createElement('div'); row.className='lg-item';
+        var body=document.createElement('div'); body.className='lg-item-body';
+        var t=document.createElement('div'); t.className='lg-item-text'; t.textContent=p.text;
+        var s=document.createElement('div'); s.className='lg-pred-pre';
+        var d=p.pre-p.post;
+        s.textContent='Predicted '+p.pre+', actually '+p.post+
+          (d>0?' \u2014 overestimated by '+d:d<0?' \u2014 worse than expected by '+Math.abs(d):' \u2014 called it exactly');
+        body.appendChild(t); body.appendChild(s); row.appendChild(body);
+        var del=document.createElement('button'); del.className='lg-del'; del.type='button'; del.textContent='\u00d7';
+        del.setAttribute('aria-label','Remove');
+        del.addEventListener('click',function(){ state.proof.preds=state.proof.preds.filter(function(x){return x.id!==p.id;}); renderPreds(); save(); });
+        row.appendChild(del); g2.appendChild(row);
+      });
+      host.appendChild(g2);
+    }
+
+    var gapEl=el('predGap');
+    if(done.length>=3){
+      var over=done.reduce(function(a,p){return a+(p.pre-p.post);},0)/done.length;
+      gapEl.hidden=false;
+      gapEl.innerHTML='<b>'+(over>0.3?'Across '+done.length+' tests, you overestimated how bad things would be by '+over.toFixed(1)+' points on average.':
+        over<-0.3?'Across '+done.length+' tests, things ran '+Math.abs(over).toFixed(1)+' points harder than you expected.':
+        'Across '+done.length+' tests, your forecasts have been close to accurate.')+'</b>'+
+        '<em>'+(over>0.3?'That gap is the measurement. Next time the dread makes a claim, this is the number to put beside it.':
+        'Worth showing your therapist \u2014 it may point at load rather than distortion.')+'</em>';
+    } else { gapEl.hidden=true; }
+  }
+
+  function renderReg(){
+    var host=el('regBody'); host.innerHTML='';
+    var items=state.proof.reg;
+    if(!items.length){
+      var p=document.createElement('p'); p.className='lg-empty';
+      p.textContent='Nothing logged yet. It does not have to be big \u2014 a conversation, ten minutes of a task, a song that landed. Small things carry the same information.';
+      host.appendChild(p); return;
+    }
+    var g=document.createElement('div'); g.className='lg-plangroup';
+    var h=document.createElement('h3'); h.textContent='Recent'; g.appendChild(h);
+    items.slice().reverse().slice(0,15).forEach(function(r){
+      var row=document.createElement('div'); row.className='lg-item';
+      var body=document.createElement('div'); body.className='lg-item-body';
+      var t=document.createElement('div'); t.className='lg-item-text'; t.textContent=r.text;
+      var s=document.createElement('div'); s.className='lg-pred-pre';
+      s.textContent=(ABSORB.filter(function(a){return a[0]===r.absorb;})[0]||['','?'])[1]+' \u00b7 '+
+        (AFTER.filter(function(a){return a[0]===r.after;})[0]||['','?'])[1].toLowerCase()+' \u00b7 '+
+        new Date(r.at).toLocaleDateString(undefined,{month:'short',day:'numeric'});
+      body.appendChild(t); body.appendChild(s); row.appendChild(body);
+      var del=document.createElement('button'); del.className='lg-del'; del.type='button'; del.textContent='\u00d7';
+      del.setAttribute('aria-label','Remove');
+      del.addEventListener('click',function(){ state.proof.reg=state.proof.reg.filter(function(x){return x.id!==r.id;}); renderReg(); save(); });
+      row.appendChild(del); g.appendChild(row);
+    });
+    host.appendChild(g);
+
+    var good=items.filter(function(r){return (r.absorb==='2'||r.absorb==='3')&&r.after!=='drain';});
+    if(good.length>=3){
+      var box=document.createElement('div'); box.className='lg-gap';
+      box.innerHTML='<b>'+good.length+' of '+items.length+' logged moments had you absorbed and not drained afterwards.</b>'+
+        '<em>Read those back and look for the conditions they share \u2014 alone or with people, making or talking, structured or loose. That shared condition is more useful for a career decision than asking yourself what you want.</em>';
+      host.appendChild(box);
+    }
+  }
+
+  function renderFutures(){
+    var host=el('futures'); host.innerHTML='';
+    FUTURES.forEach(function(f,i){
+      var w=document.createElement('div'); w.className='lg-future';
+      var h=document.createElement('h4'); h.textContent=f[0];
+      var p=document.createElement('p'); p.textContent=f[1];
+      var ta=document.createElement('textarea'); ta.className='lg-ta'; ta.value=state.proof.futures[i]||'';
+      ta.setAttribute('aria-label',f[0]);
+      ta.addEventListener('input',function(){ state.proof.futures[i]=ta.value; save(); });
+      w.appendChild(h); w.appendChild(p); w.appendChild(ta); host.appendChild(w);
+    });
+  }
+
+  function renderProof(){ renderPreds(); renderReg(); renderFutures(); }
+
+  /* ---- pattern ---- */
+  function span(from,to){
+    var o={n:0,mood:[],tank:[],own:[],anchor:0,anchorPoss:0,avoidD:0,avoidM:0,real:0};
+    for(var i=from;i<=to;i++){
+      var r=state.entries[dayKey(shift(today,-i))];
+      if(!touched(r))continue;
+      o.n++;
+      if(r.mood)o.mood.push(Number(r.mood));
+      if(r.tank)o.tank.push(Number(r.tank));
+      if(r.own!==undefined)o.own.push(Number(r.own));
+      ['a0','a1','a2'].forEach(function(a){ o.anchorPoss++; if(r[a]==='floor'||r[a]==='full')o.anchor++; });
+      if(r.dia==='avoid')o.avoidD++;
+      if(r.money==='avoid')o.avoidM++;
+      if(r.person==='real')o.real++;
+    }
+    return o;
+  }
+  function avg(a){ return a.length? a.reduce(function(x,y){return x+y;},0)/a.length : null; }
+
+  function renderPattern(){
+    var wrap=el('ribbon'); wrap.innerHTML='';
+    var logged=0;
+    for(var i=29;i>=0;i--){
+      var k=dayKey(shift(today,-i)), r=state.entries[k];
+      var b=document.createElement('button'); b.type='button'; b.className='lg-cell';
+      if(touched(r)){ logged++; b.className+=score(r)>=4?' is-full':' is-partial'; }
+      if(k===TODAY)b.className+=' is-today';
+      b.title=k+(touched(r)?'':' \u2014 no entry'); b.setAttribute('aria-label',b.title);
+      wrap.appendChild(b);
+    }
+    var A=span(0,6), B=span(7,13);
+    var dl=el('readout'); dl.innerHTML='';
+    function row(t,d,cls){ var a=document.createElement('dt'); a.textContent=t;
+      var b=document.createElement('dd'); b.textContent=d; if(cls)b.className=cls;
+      dl.appendChild(a); dl.appendChild(b); }
+    function delta(label,now,then,unit){
+      if(now===null){ return; }
+      if(then===null){ row(label,'Averaging '+now.toFixed(1)+unit+'. No prior week to compare yet.'); return; }
+      var d=now-then;
+      var word=Math.abs(d)<0.25?'holding about level with last week.':
+               d>0?'up '+d.toFixed(1)+' on last week.':'down '+Math.abs(d).toFixed(1)+' on last week.';
+      row(label,'Averaging '+now.toFixed(1)+unit+', '+word, Math.abs(d)<0.25?'':(d>0?'up':'down'));
+    }
+
+    if(!A.n&&!B.n){ row('Nothing to read yet','Log a few days and the comparison starts here.'); }
+    else{
+      row(logged+' of 30 days logged','Gaps are information, not a verdict.');
+      delta('Mood',avg(A.mood),avg(B.mood),' out of 5');
+      delta('Tank',avg(A.tank),avg(B.tank),' out of 5');
+      if(A.anchorPoss) row('Anchors','You showed up on '+A.anchor+' of '+A.anchorPoss+' chances this week. Floors count.');
+      var oA=avg(A.own);
+      if(oA!==null) row('Time for yourself', oA===0?'None on any logged day this week.':
+        oA<1?'Well under half an hour on a typical day.':oA<2?'Half an hour to an hour most days.':'An hour or more most days.');
+      if(A.real) row('Honest contact',A.real+(A.real===1?' day':' days')+' someone got the real answer.');
+      else if(A.n) row('Honest contact','Nobody got the real answer this week. That is the one to fix first.','down');
+      if(A.avoidD) row('Diabetes avoidance','Flagged on '+A.avoidD+(A.avoidD===1?' day':' days')+'. Raise it with your care team — distress is its own condition.','down');
+      if(A.avoidM) row('Money avoidance','Flagged on '+A.avoidM+(A.avoidM===1?' day':' days')+'. Same pattern, different subject.','down');
+    }
+
+    var tn=el('therapistNotes'); tn.innerHTML=''; var found=0;
+    for(var m=20;m>=0;m--){
+      var kk=dayKey(shift(today,-m)), rec=state.entries[kk];
+      if(rec&&rec.therapist){
+        found++;
+        var div=document.createElement('div'); div.className='lg-note-item';
+        var b2=document.createElement('b');
+        b2.textContent=new Date(kk+'T12:00:00').toLocaleDateString(undefined,{month:'short',day:'numeric'});
+        div.appendChild(b2); div.appendChild(document.createTextNode(rec.therapist)); tn.appendChild(div);
+      }
+    }
+    if(!found){ var p=document.createElement('p'); p.className='lg-empty';
+      p.textContent='Nothing flagged in the last three weeks. Anything you note on Today collects here, so you walk in with a record instead of a blank.';
+      tn.appendChild(p); }
+  }
+
+  /* ---- rules ---- */
+  function renderRules(){
+    var host=el('rules'); host.innerHTML='';
+    RULES.forEach(function(r){
+      var d=document.createElement('div'); d.className='lg-rule-item';
+      var h=document.createElement('h3'); h.textContent=r[0];
+      var p=document.createElement('p'); p.textContent=r[1];
+      d.appendChild(h); d.appendChild(p); host.appendChild(d);
+    });
+  }
+
+  /* ---- export ---- */
+  function label(set,v){ var f=set.filter(function(x){return x[0]===v;})[0]; return f?f[1]:v; }
+  function buildWeek(){
+    var L=['Weekly review \u2014 last 7 days',''];
+    for(var i=6;i>=0;i--){
+      var d=shift(today,-i), k=dayKey(d), r=state.entries[k];
+      var day=d.toLocaleDateString(undefined,{weekday:'short'});
+      var pl=state.plan[k]||[];
+      if(!touched(r)&&!pl.length){ L.push(day+' \u2014 no entry'); continue; }
+      var p=[];
+      r=r||{};
+      if(pl.length)p.push('planned '+pl.length+', done '+pl.filter(function(x){return x.done;}).length);
+      if(r.own!==undefined)p.push('own time: '+label(OWN,r.own).toLowerCase()+(r.ownWhat?' ('+r.ownWhat+')':''));
+      state.settings.anchors.forEach(function(a,i){ if(r['a'+i])p.push((a.name||'anchor')+': '+r['a'+i]); });
+      if(r.follow)p.push('follow-ups: '+label(FOLLOW,r.follow).toLowerCase());
+      if(r.person)p.push('person: '+label(PERSON,r.person).toLowerCase());
+      if(r.mood)p.push('mood '+r.mood+'/5'); if(r.tank)p.push('tank '+r.tank+'/5');
+      if(r.dia)p.push('diabetes: '+label(DIA,r.dia).toLowerCase());
+      if(r.money)p.push('money: '+label(MONEY,r.money).toLowerCase());
+      if(r.sleep)p.push('slept '+label(SLEEP,r.sleep).toLowerCase());
+      if(r.fade)p.push('faded: '+r.fade);
+      if(r.note)p.push('note to self: '+r.note);
+      if(r.therapist)p.push('THERAPIST: '+r.therapist);
+      L.push(day+' \u2014 '+p.join(' | '));
+    }
+    var settled=state.proof.preds.filter(function(p){return p.post!==null&&p.post!==undefined;});
+    if(settled.length>=2){
+      var over=settled.reduce(function(a,p){return a+(p.pre-p.post);},0)/settled.length;
+      L.push('','Predictions: '+settled.length+' settled, average forecast error '+(over>=0?'+':'')+over.toFixed(1)+' (positive means it was less bad than expected).');
+    }
+    var open=state.sparks.filter(function(s){return !s.done;});
+    if(open.length){ L.push('','Sparks not acted on:'); open.slice(-8).forEach(function(s){L.push('- '+s.text);}); }
+    L.push('','Read this back: where did my time go, which direction is my mood moving compared to last week, what am I avoiding, and what is the one change for next week?');
+    return L.join('\n');
+  }
+
+  /* ---- today ---- */
+  function renderToday(){
+    el('dateLine').textContent=today.toLocaleDateString(undefined,{weekday:'long',month:'long',day:'numeric'});
+    var r=e(), y=state.entries[dayKey(shift(today,-1))];
+    if(!r.oneThingText&&y&&y.tomorrow)r.oneThingText=y.tomorrow;
+    if(y&&y.note){ el('recall').hidden=false; el('recallText').textContent=y.note; }
+    el('ownWhat').value=r.ownWhat||''; el('fade').value=r.fade||'';
+    el('note').value=r.note||''; el('therapist').value=r.therapist||'';
+    el('tomorrow').value=r.tomorrow||r.oneThingText||'';
+    el('personLabel').textContent=state.settings.person?('Contact with '+state.settings.person):'Contact with your person';
+    paintSingle(el('own'),'own'); paintSingle(el('follow'),'follow'); paintSingle(el('person'),'person');
+    paintSingle(el('mood'),'mood'); paintSingle(el('tank'),'tank');
+    paintSingle(el('dia'),'dia'); paintSingle(el('money'),'money'); paintSingle(el('sleep'),'sleep');
+    var n=Object.keys(state.entries).filter(function(k){return touched(state.entries[k]);}).length;
+    el('subLine').textContent=n===0?'First entry. Saves as you type.':'Entry '+(touched(r)?n:n+1)+'. Saves as you type.';
+  }
+
+  function showTab(which){
+    [['tabToday','panelToday'],['tabPlan','panelPlan'],['tabSparks','panelSparks'],['tabProof','panelProof'],['tabPattern','panelPattern'],['tabRules','panelRules']]
+      .forEach(function(p){ var on=p[0]===which;
+        el(p[0]).setAttribute('aria-selected',on?'true':'false'); el(p[1]).hidden=!on; });
+    if(which==='tabProof')renderProof();
+    if(which==='tabPlan'){ renderPlan(); el('planText').focus(); }
+    if(which==='tabPattern')renderPattern();
+    if(which==='tabRules'){ renderRules(); renderAnchorEdit(); el('personName').value=state.settings.person||''; }
+    if(which==='tabSparks')el('sparkInput').focus();
+  }
+
+  function boot(){
+    single(el('own'),OWN,'own','lg-chip',renderHero);
+    single(el('follow'),FOLLOW,'follow','lg-chip');
+    single(el('person'),PERSON,'person','lg-chip');
+    single(el('mood'),MOOD,'mood','lg-scale-btn');
+    single(el('tank'),TANK,'tank','lg-scale-btn');
+    single(el('dia'),DIA,'dia','lg-chip',null,{avoid:'is-warn'});
+    single(el('money'),MONEY,'money','lg-chip',null,{avoid:'is-warn'});
+    single(el('sleep'),SLEEP,'sleep','lg-chip');
+    renderAnchors();
+
+    wireText('ownWhat','ownWhat'); wireText('fade','fade');
+    wireText('note','note'); wireText('therapist','therapist'); wireText('tomorrow','tomorrow');
+
+    el('personName').addEventListener('input',function(){
+      state.settings.person=el('personName').value;
+      el('personLabel').textContent=state.settings.person?('Contact with '+state.settings.person):'Contact with your person';
+      save();
+    });
+
+    var kh=el('sparkKind');
+    KINDS.forEach(function(k){
+      var b=document.createElement('button'); b.type='button'; b.className='lg-chip';
+      b.textContent=k[1]; b.dataset.val=k[0];
+      b.setAttribute('aria-pressed',k[0]===sparkKind?'true':'false');
+      b.addEventListener('click',function(){ sparkKind=k[0];
+        Array.prototype.forEach.call(kh.children,function(x){x.setAttribute('aria-pressed',x.dataset.val===sparkKind?'true':'false');}); });
+      kh.appendChild(b);
+    });
+    el('sparkAdd').addEventListener('click',addSpark);
+    el('sparkInput').addEventListener('keydown',function(ev){ if(ev.key==='Enter')addSpark(); });
+
+    el('planAdd').addEventListener('click',addPlanItem);
+    el('planText').addEventListener('keydown',function(ev){ if(ev.key==='Enter')addPlanItem(); });
+
+    miniGroup(el('predPre'),SEV.map(String),function(){return predPre;},function(v){predPre=v;});
+    miniGroup(el('regAbsorb'),ABSORB,function(){return regAbsorb;},function(v){regAbsorb=v;});
+    miniGroup(el('regAfter'),AFTER,function(){return regAfter;},function(v){regAfter=v;});
+    el('predAdd').addEventListener('click',function(){
+      var t=el('predText').value.trim();
+      if(!t||predPre===null){ el('predText').focus(); return; }
+      state.proof.preds.push({id:Date.now()+'',text:t,pre:Number(predPre),post:null,at:Date.now()});
+      el('predText').value=''; predPre=null;
+      miniGroup(el('predPre'),SEV.map(String),function(){return predPre;},function(v){predPre=v;});
+      renderPreds(); save();
+    });
+    el('regAdd').addEventListener('click',function(){
+      var t=el('regText').value.trim();
+      if(!t||regAbsorb===null||regAfter===null){ el('regText').focus(); return; }
+      state.proof.reg.push({id:Date.now()+'',text:t,absorb:regAbsorb,after:regAfter,at:Date.now()});
+      el('regText').value=''; regAbsorb=null; regAfter=null;
+      miniGroup(el('regAbsorb'),ABSORB,function(){return regAbsorb;},function(v){regAbsorb=v;});
+      miniGroup(el('regAfter'),AFTER,function(){return regAfter;},function(v){regAfter=v;});
+      renderReg(); save();
+    });
+
+    ['tabToday','tabPlan','tabSparks','tabProof','tabPattern','tabRules'].forEach(function(t){
+      el(t).addEventListener('click',function(){showTab(t);}); });
+
+    el('copyWeek').addEventListener('click',function(){
+      var t=buildWeek(), o=el('out'); o.textContent=t; o.classList.add('is-open');
+      if(navigator.clipboard)navigator.clipboard.writeText(t).catch(function(){});
+    });
+    el('backup').addEventListener('click',function(){
+      try{
+        var b=new Blob([JSON.stringify(state)],{type:'application/json'});
+        var a=document.createElement('a');
+        a.href=URL.createObjectURL(b);
+        a.download='log-backup-'+TODAY+'.json';
+        document.body.appendChild(a); a.click(); a.remove();
+        setTimeout(function(){URL.revokeObjectURL(a.href);},2000);
+      }catch(x){ alert('Could not create the backup file here. Try from the downloaded copy.'); }
+    });
+    el('restoreBtn').addEventListener('click',function(){ el('restoreFile').click(); });
+    el('restoreFile').addEventListener('change',function(){
+      var f=el('restoreFile').files[0]; if(!f)return;
+      var rd=new FileReader();
+      rd.onload=function(){
+        try{
+          var p=JSON.parse(rd.result);
+          if(!p||!p.entries)throw new Error('Not a backup file');
+          if(!confirm('Replace everything currently in the log with this backup?'))return;
+          state.entries=p.entries; state.sparks=p.sparks||[]; state.plan=p.plan||{};
+          if(p.proof){ state.proof.preds=p.proof.preds||[]; state.proof.reg=p.proof.reg||[];
+            if(p.proof.futures&&p.proof.futures.length===3)state.proof.futures=p.proof.futures; }
+          if(p.settings){ if(p.settings.anchors&&p.settings.anchors.length===3)state.settings.anchors=p.settings.anchors;
+            state.settings.person=p.settings.person||''; }
+          renderToday(); renderHero(); renderSparks(); renderAnchors(); renderPlanLine(); renderPattern();
+          save(); alert('Restored.');
+        }catch(x){ alert('That file could not be read as a backup.'); }
+        el('restoreFile').value='';
+      };
+      rd.readAsText(f);
+    });
+
+    el('clearAll').addEventListener('click',function(){
+      if(!confirm('Erase every entry and every spark? This cannot be undone.'))return;
+      state.entries={}; state.sparks=[]; state.plan={};
+      state.proof={preds:[],reg:[],futures:['','','']};
+      store.del(KEY).catch(function(){});
+      el('out').classList.remove('is-open');
+      renderToday(); renderHero(); renderSparks(); renderAnchors(); renderPattern(); renderPlanLine();
+    });
+
+    renderToday(); renderHero(); renderSparks(); renderPlanLine();
+    var sk=el('skeleton'); if(sk)sk.remove();
+    el('app').hidden=false;
+    if(!canSave)el('err').textContent='Saving is unavailable here, so entries will not survive closing this. Everything else works.';
+  }
+  function safeBoot(){
+    if(booted)return; booted=true;
+    try{boot();}catch(x){ booted=false; var sk=el('skeleton');
+      if(sk)sk.textContent='Could not start: '+(x&&x.message?x.message:String(x)); }
+  }
+  setTimeout(safeBoot,2500);
+
+  store.get(KEY).then(function(r){
+    if(r&&r.value){ try{ var p=JSON.parse(r.value);
+      if(p&&p.entries){ state.entries=p.entries; state.sparks=p.sparks||[]; state.plan=p.plan||{};
+        if(p.proof){ state.proof.preds=p.proof.preds||[]; state.proof.reg=p.proof.reg||[];
+          if(p.proof.futures&&p.proof.futures.length===3)state.proof.futures=p.proof.futures; }
+        if(p.settings){ if(p.settings.anchors&&p.settings.anchors.length===3)state.settings.anchors=p.settings.anchors;
+          state.settings.person=p.settings.person||''; } } }catch(x){} }
+  }).catch(function(){}).then(safeBoot,safeBoot);
+})();
+</script>
+
+<script>
+(function(){
+  try{
+    var m={name:"Log",short_name:"Log",start_url:".",display:"standalone",
+      background_color:"#E9EBE7",theme_color:"#E9EBE7",
+      icons:[{src:"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAIAAACyr5FlAAACC0lEQVR42u3bsY3CMBiAUYNuDyioUsAMbEDBmBRswAz0NLfJDXDBgJUY5/d7rWMhJZ+siNir7bBPMGbtFiAOxIE4EAfiQByIA3EgDsQB4kAciANxIA7EgTgQB+JAHCAOxIE4EAfiQByIA3EgDsQB4kAciANxIA7EgTgQB+JAHPTrxy2o73DaPRu6Xx9WDmWUjIqj3zJa60MciANxIA7EgTgQB+JAHIgDcYA4EAfiQByIA3EgDsRBWHafL2YvuJWjoTJSY3vBxdFQGfrwzoE4EAfiQByIA3EgDsRBeL6tLEnlz0BWjghlpHn+5hdHhDJm6kMciANxIA7EwVc19z/H5nh+NvR7u3hg/a4cmTJejhI5jneevT68cyAOxIE4EAfiAHEgDsSBOBAH4kAcLIxzK+XCbz2xckxfRoqytUAc05cRpg9xIA7EgTgQB+JAHIgDcSAOxAH/zPVV1mF5K8fHZSSHoXuOw2F5cSAOxAHiQByIA3EgDsSBOBAH4qBDcQ5S2yRg5fi4jOQjcM9x2CQgDsSBOBAH4kAciAPEgTgQB+JAHIgDcSAOxIE4EMe03tmwOXpN/Yn36+PlxNFr6v9i8cTmVo78vcuM1p+Yv6GZ0fq/WDyx2Go77K2feOdAHIgDcSAOxIE4EAfiQBwgDsSBOBAH4kAciANxIA7EAeJAHIgDcSAOxIE4EAeh/AFRu2tlXQsHrAAAAABJRU5ErkJggg==",sizes:"180x180",type:"image/png",purpose:"any"}]};
+    var b=new Blob([JSON.stringify(m)],{type:"application/manifest+json"});
+    var l=document.createElement("link"); l.rel="manifest"; l.href=URL.createObjectURL(b);
+    document.head.appendChild(l);
+  }catch(x){}
+})();
+</script>
+</body>
+</html>
